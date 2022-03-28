@@ -19,6 +19,29 @@ header {
 	padding: 10px 0;
 }
 
+.container {
+	max-width: 1200px;
+	padding: 0px 20px;
+	margin: 0 auto;
+}
+
+.small-container {
+	max-width: 600px;
+	padding: 0px 20px;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.site-title {
+	font-size: 32px;
+	font-weight: 700;
+	color: #3944f7;
+}
+
+/* Navigation Menu */
 .nav-bar {
 	display: flex;
 	align-items: center;
@@ -48,14 +71,61 @@ header {
 	position: relative;
 }
 
-
-
 .nav-bar .nav-link:hover {
 	color: #3944f7;
 }
 
-.container {
-	max-width: 1200px;
-	padding: 0px 20px;
-	margin: 0 auto;
+.registration {
+	padding: 30px 0;
+}
+
+/* Registration Page */
+
+.registration h2 {
+	margin-bottom: 30px;
+}
+.input-item {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 20px;
+}
+
+.input-item input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	outline: none;
+	border-radius: 5px;
+}
+
+.input-item input:focus {
+	border: 1px solid #3944f7;
+}
+
+.primary-large-btn {
+	background-color: #3944f7;
+	color: #fff;
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.primary-large-btn:disabled {
+	background-color: #667685;
+}
+
+.small-text {
+	color: rgb(163, 163, 163);
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+.small-text a{
+  color: #3944f7;
 }

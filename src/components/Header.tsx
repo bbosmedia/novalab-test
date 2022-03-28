@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Container from './Container'
 
-const Header = () => {
+const Header:React.FC = () => {
   return (
     <header>
         <Container>
