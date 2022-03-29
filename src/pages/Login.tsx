@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import SmallContainer from '../components/SmallContainer'
 import { validateEmail } from '../extrafunctions/validations'
+import { login } from '../redux/actions/userReducer'
 import { RootState } from '../redux/reducers'
 
 interface Input {
@@ -13,6 +14,8 @@ interface Input {
 const Login = () => {
 	const navigate = useNavigate()
 	const user = useSelector((state:RootState)=>state.user)
+	const data = useSelector((state:RootState)=>state.userLogin)
+	const dispatch = useDispatch()
 	const [input, setInput] = useState<Input>({
 		email: '',
 		password: '',
@@ -43,6 +46,9 @@ const Login = () => {
 		} else {
 			setPv(true)
 		}
+		if(validateEmail(input.email) && input.password){
+			dispatch(login(input.email, input.password))
+		}
 	}
 
 	useEffect(()=>{
@@ -65,9 +71,10 @@ const Login = () => {
 						<input id="password" name="password" type="password" value={input.password} onChange={handleChange} required placeholder="Enter your password..." />
 						{pv && <p className="error-text">Password must be more than 6 characters.</p>}
 					</div>
-					<button type="submit" className="primary-large-btn">
-						Sign Up
-					</button>
+					{data.error && <p className='error-text'>{data.data}</p>}
+					{data.loading && <button type="submit" className="primary-large-btn">
+						Sign In
+					</button>}
 				</form>
 				<p className="small-text">
 					If you have not account, please <Link to="/sign-up">Register</Link>

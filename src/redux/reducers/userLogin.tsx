@@ -1,4 +1,4 @@
-import { ERRORREGISTER, LOADREGISTER, SUCCESSREGISTER } from "../actionTypes";
+import { ERRORLOGIN, LOADLOGIN, SUCCESSLOGIN } from "../actionTypes";
 import initialState from "../initialState";
 
 
@@ -18,12 +18,12 @@ type Action = {
 
 const userLogin = (state: State=initialState.userLogin, action: Action) =>{
     switch(action.type){
-        case LOADREGISTER:
+        case LOADLOGIN:
             return {loading: true, data: null, success: false, error: false}
-        case SUCCESSREGISTER:
-            return {loading: true, data: action.payload, success: true, error: false}
-        case ERRORREGISTER:
-            return {loading: true, data: null, success: false, error: false}
+        case SUCCESSLOGIN:
+            return {loading: false, data: action.payload, success: true, error: false}
+        case ERRORLOGIN:
+            return {loading: false, data: action.payload, success: false, error: true}
         default:
             return state
     }
