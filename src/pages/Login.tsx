@@ -72,9 +72,9 @@ const Login = () => {
 						{pv && <p className="error-text">Password must be more than 6 characters.</p>}
 					</div>
 					{data.error && <p className='error-text'>{data.data}</p>}
-					{data.loading && <button type="submit" className="primary-large-btn">
+					 <button type="submit" className="primary-large-btn">
 						Sign In
-					</button>}
+					</button>
 				</form>
 				<p className="small-text">
 					If you have not account, please <Link to="/sign-up">Register</Link>
