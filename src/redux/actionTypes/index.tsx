@@ -1,0 +1,21 @@
+
+export const RESTARTDATA = 'RESTARTDATA'
+export const LOADDATA = 'LOADDATA'
+export const LOADMOREDATA = 'LOADMOREDATA'
+
+
+export const LOAD = 'LOAD'
+export const SUCCESS = 'SUCCESS'
+export const ERROR = 'ERROR'
+
+export const LOADREGISTER = 'LOADREGISTER'
+export const SUCCESSREGISTER = 'SUCCESSREGISTER'
+export const ERRORREGISTER = 'ERRORREGISTER'
+
+export const USERLOADING = 'USERLOADING'
+export const USERSUCCESS = 'USERSUCCESS'
+export const USERERROR = 'USERERROR'
+
+export const LOGINLOADING = 'LOGINLOADING'
+export const LOGINSUCCESS = 'LOGINSUCCESS'
+export const LOGINERROR = 'LOGINERROR'
