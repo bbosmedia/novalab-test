@@ -8,7 +8,6 @@ import Container from './Container'
 const Header: React.FC = () => {
   const user = useSelector((state: RootState) => state.user)
   const dispatch = useDispatch()
-  console.log(user)
 	return (
 		<header>
 			<Container>
